@@ -1,108 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-
-
-
-body{
-    background-color: rgb(32, 25, 77);
-    font-size: 100%;
-
+body {
+  background-color: rgb(32, 25, 77);
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
 }
 
-
-.cabecalho{
-    display: flex;
-    padding-top: 20px;
-    gap: 20px;
-    padding-left: 20px;
-    justify-content: space-around;
+/* animações */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(25px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-.cabecalho-imagem-instagram:hover{
-    border-radius: 18px;
-    height: 130px;
-     box-shadow: 0 0 12px rgba(255,255,255,0.2);
-     transition: transform 0.3s ease;
-    transform: scale(1.1);
+/* CABEÇALHO - usa seletor genérico para qualquer imagem dentro do header */
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding: 22px 0;
+  animation: slideDown 0.9s ease forwards;
 }
 
-.cabecalho-imagem-linkedin:hover{
-    border-radius: 18px;
-    height: 130px;
-     box-shadow: 0 0 12px rgba(255,255,255,0.2);
-     transition: transform 0.3s ease;
-     transform: scale(1.1);
+/* aplica a todas imagens dentro do header - evita erro com nomes de classe */
+.cabecalho img {
+  height: 120px;
+  border-radius: 14px;
+  object-fit: cover;
+  transition: transform .28s ease, box-shadow .28s ease;
 }
 
-.titulo-conteudo{
-    text-align: center;
-     font-family: 'Righteous', sans-serif;
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 20px;
-    font-size: 2.3rem;
+.cabecalho img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(255,255,255,0.25);
 }
 
-.conteudo{
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-     border-top: 0.4px solid rgb(243, 238, 234);
-     margin-bottom:48px;
-     margin-top: 10px;
-     padding-top: 40px;
-
+/* CONTEÚDO */
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  margin-top: 6px;
+  padding: 36px 18px;
+  text-align: center;
 }
 
-.imagem-conteudo-principal{
-    display: block;
-    margin: 20px auto;
-    border-radius: 23px;
-     box-shadow: 0 0 12px rgba(255,255,255,0.2);
-      width: 150px;
+/* título */
+.titulo-conteudo {
+  font-family: 'Righteous', sans-serif;
+  font-size: 2.3rem;
+  margin-bottom: 18px;
+  color: #fff;
+  animation: fadeIn 1s ease forwards;
 }
 
-
-.texto-conteudo-principal{
-    margin: 10px 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: #E0E0FF;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 10px auto;
-    padding: 0 10px;
+/* imagem principal */
+.imagem-conteudo-principal,
+.foto-perfil,
+img.foto {
+  display: block;
+  margin: 14px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 14px rgba(255,255,255,0.22);
+  transition: transform .3s ease;
+  animation: fadeInScale 1.15s ease forwards;
 }
 
+.imagem-conteudo-principal:hover,
+.foto-perfil:hover,
+img.foto:hover {
+  transform: scale(1.05);
+}
 
-.rodape{
-    border-top: 0.4px solid rgb(243, 238, 234);
-    padding-bottom: 10px;
+/* texto */
+.texto-conteudo-principal,
+.texto {
+  max-width: 780px;
+  margin: 14px auto;
+  padding: 0 12px;
+  line-height: 1.65;
+  color: #E8E6FF;
+  font-size: 1.03rem;
+  animation: fadeIn 1.25s ease forwards;
+}
+
+/* RODAPÉ e BOTÃO */
+.rodape {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding: 22px 0;
+  text-align: center;
 }
 
 .botao {
-    background-color: #A288FF;
-    color: #000000;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-    display: block;        /* transforma em bloco */
-    margin: 8px auto 0;   /* centraliza! */
-    text-align: center;
-    width: fit-content;    /* mantém tamanho exato do botão */
-    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  display: inline-block;
+  background-color: #A288FF;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: transform .22s ease, background-color .22s ease;
+  box-shadow: 0 6px 18px rgba(10,10,30,0.18);
+  animation: fadeIn 1.5s ease forwards;
 }
 
-
 .botao:hover {
-    background-color: #C5B3FF;
-    transform: scale(1.05);
+  transform: translateY(-3px) scale(1.03);
+  background-color: #C5B3FF;
+}
+
+/* RESPONSIVO básico */
+@media (max-width: 520px) {
+  .cabecalho img { height: 86px; }
+  .imagem-conteudo-principal { width: 120px; height: 120px; border-radius: 16px; }
+  .titulo-conteudo { font-size: 1.8rem; }
+  .texto { font-size: 0.98rem; padding: 0 14px; }
 }
