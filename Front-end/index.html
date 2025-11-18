@@ -3,44 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Henrique • Apresentação</title>
+    <title>Lucas Henrique | Portfólio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <header class="cabecalho">
-        <a href="https://www.instagram.com/luks.hr7/" target="_blank">
-            <img class="cabecalho-imagem" src="instagram.jpg" alt="Meu Instagram">
-        </a>
-        <a href="https://www.linkedin.com/in/lucas-henrique-ramalho-4a8803353/" target="_blank">
-            <img class="cabecalho-imagem" src="Linkedin.png" alt="Meu Linkedin">
-        </a>
+        <h1 class="logo">Lucas.dev</h1>
+
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
     </header>
 
-    <main class="conteudo">
-        <section>
-            <h1 class="titulo-conteudo">Minha Apresentação</h1>
-            <img class="imagem-conteudo-principal" src="minha imagem.jpg" alt="Minha foto">
-        </section>
+    <section class="hero">
+        <div class="hero-card reveal">
+            <img src="minha imagem.jpg" class="foto-perfil" alt="Foto de Lucas">
+            <h2>Lucas Henrique Ramalho</h2>
+            <p>Desenvolvedor Front-End em formação • HTML • CSS • JavaScript</p>
 
-        <section class="sobre-container">
-            <h2 class="subtitulo">Sobre mim</h2>
-            <p class="texto">
-                Olá! Meu nome é <strong>Lucas Henrique Ramalho</strong>, tenho 24 anos e sou estudante de  
-                <strong>Análise e Desenvolvimento de Sistemas</strong>, atualmente no penúltimo semestre.<br><br>
-                Tenho foco em <strong>desenvolvimento Front-end</strong>, mas estou sempre aberto a novas  
-                oportunidades dentro do mundo da tecnologia.<br><br>
-                Possuo conhecimentos básicos em <strong>HTML, CSS e JavaScript</strong>, e estou constantemente
-                buscando evolução por meio de projetos pessoais, cursos e prática diária.<br><br>
-                Busco minha primeira oportunidade de estágio para aprender, crescer e contribuir de forma profissional.
-            </p>
-        </section>
-    </main>
+            <div class="links">
+                <a href="https://www.instagram.com/luks.hr7/" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/in/lucas-henrique-ramalho-4a8803353/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </section>
 
-    <footer class="rodape">
-        <a class="botao" href="Curriculo_Lucas_Ramalho_Atualizado.pdf" download>
-            Baixar Currículo
-        </a>
-    </footer>
+    <section id="sobre" class="sobre reveal">
+        <h2>Sobre mim</h2>
+        <p>
+            Olá! Sou Lucas Henrique, 24 anos, estudante de Análise e Desenvolvimento de Sistemas
+            no penúltimo semestre. Tenho foco em Front-End e estou sempre estudando para evoluir,
+            criando projetos pessoais e buscando minha primeira oportunidade como estagiário.
+        </p>
+    </section>
+
+    <section id="projetos" class="projetos-reveal">
+        <h2>Projetos</h2>
+        <p>Em breve vou adicionar meus melhores projetos aqui 👨‍💻</p>
+    </section>
+
+    <section id="contato" class="contato-reveal">
+        <h2>Contato</h2>
+        <a class="botao" href="Curriculo_Lucas_Ramalho_Atualizado.pdf" download>Baixar Currículo</a>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
