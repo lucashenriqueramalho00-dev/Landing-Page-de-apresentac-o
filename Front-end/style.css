@@ -32,7 +32,7 @@ body {
     opacity: 1;
 }
 
-/* HERO */
+
 .hero {
     height: 90vh;
     display: flex;
@@ -74,7 +74,7 @@ body {
     background: rgba(255,255,255,0.3);
 }
 
-/* SEÇÕES */
+
 section {
     padding: 60px 20px;
     text-align: center;
@@ -108,4 +108,3 @@ section {
     opacity: 1;
     transform: translateY(0px);
 }
-
